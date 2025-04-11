@@ -1,0 +1,314 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+}
+
+body {
+    background: linear-gradient(rgb(222, 131, 243), rgb(242, 236, 242));
+    padding-top: 1rem;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+main {
+    padding-top: 7rem;
+}
+
+nav.menu {
+    position: fixed;
+    background-color: rgb(158, 201, 239);
+    width: 100%;
+    height: 10rem;
+    color: rgb(71, 91, 236);
+    z-index: 3;
+}
+
+.lista-contato h2 {
+    top: 7.5rem;
+    position: sticky;
+    background-color: rgb(158, 201, 239);
+}
+
+h1,
+h2,
+h3 {
+    font-family: "Roboto Condensed", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: italic;
+}
+
+table th {
+    background-color: blue;
+    color: aliceblue;
+}
+
+table,
+td,
+th {
+    border: 1px solid black;
+}
+
+table tr:nth-child(2n + 1) {
+    background-color: rgb(149, 141, 141);
+}
+
+table tr:nth-child(2n + 2) {
+    background-color: rgb(255, 253, 253);
+}
+
+
+table {
+    font-size: 2.4rem;
+    border-collapse: separate;
+}
+
+ul,
+ol {
+    padding-left: 3.4rem;
+    font-size: 2.4rem;
+}
+
+ul {
+    list-style: square;
+}
+
+.boxes {
+    position: relative;
+    display: flex;
+    /*alinha todas caixas*/
+    flex-wrap: wrap
+}
+
+.boxes2 {
+    height: calc(100vh);
+    position: relative;
+    display: flex;
+    /*alinha todas caixas*/
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-flow: row wrap;
+    /*faz o mesmo efeito do flex direction e wrap*/
+    align-content: center;
+    justify-content: center;
+    gap: 2rem 1rem;
+    /*espeçamento entre os intens*/
+    order: 10;
+    flex-basis: 25%;
+}
+
+.box:nth-child(1) {
+    order: 1;
+}
+
+.box:nth-child(2) {
+    order: 2;
+}
+
+.box:nth-child(5) {
+    order: 3;
+}
+
+
+.box+span {
+    display: none;
+}
+
+.box {
+    flex: 25%;
+    height: 100px;
+    width: 200px;
+    padding: 15px;
+    margin: 25px;
+    background-color: blueviolet;
+    font-size: 2.4rem;
+    color: aliceblue;
+    border: 2px solid black;
+    display: inline-block;
+    /*se o elemento couder ao lado esse codigo coloca ao lado*/
+    border-radius: 1.4rem;
+    position: static;
+    /*padrão*/
+}
+
+.box p,
+button {
+    font-size: 2rem;
+    display: flex;
+    gap: 0.5rem;
+}
+
+/*.box:nth-child(1) {
+    position: absolute;
+    top:0px;
+    left:100px;
+}
+
+.box:nth-child(n + 2) {
+    display: none;
+}*/
+
+img {
+    margin-top: 100px;
+    height: 100px;
+    width: 100px;
+    object-fit: cover;
+    /* para imagem grande não ficar distorcida*/
+    display: block;
+}
+
+a {
+    font-size: 2.4rem;
+    color: rgb(3, 3, 85);
+}
+
+a:visited {
+    color: brown;
+}
+
+a:hover {
+    color: black;
+}
+
+.novo-em {
+    font-size: 85%;
+}
+
+h3 {
+    font-style: italic;
+    text-decoration: underline;
+    text-transform: capitalize;
+    text-align: center;
+}
+
+p {
+    font-size: 18px;
+    text-align: justify;
+    text-indent: 50px;
+}
+
+.imagem {
+    height: 500px;
+    width: 100%;
+    background-color: rgb(60, 65, 65);
+    background-image: url('https://images.unsplash.com/photo-1531366936337-7c912a4589a7?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/*treino 2*/
+
+a {
+    background-color: blue;
+    color: white;
+    border: none;
+    font-size: 2.4rem;
+    padding: 0.6rem 2.4rem;
+    cursor: pointer;
+    margin: auto;
+    opacity: 0.5;
+    width: 80%;
+    text-decoration: dashed;
+    text-align: center;
+    transition: 0.2ms ease-out, background-color 1s ease-in-out;
+
+    display: inline-block;
+}
+
+[data-anchor="products"] {
+    background-color: blue;
+    color: white;
+    border: none;
+    font-size: 2.4rem;
+    padding: 0.6rem 2.4rem;
+    cursor: pointer;
+    margin: auto;
+    opacity: 0.5;
+    width: 80%;
+    text-decoration: dashed;
+    text-align: center;
+    transition: 0.2ms ease-out, background-color 1s ease-in-out;
+
+    display: inline-block;
+    /*  transform: scale(1.5) rotate(10deg) translateY(10rem);*/
+}
+
+[data-anchor="time"] {
+    margin-top: 2rem;
+    animation: pulse .8s infinite;
+    animation-fill-mode: forwards;
+    animation-direction: alternate;
+    transform: scale(1);
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    /* 50% transform: scale(1.3);
+        opacity: .5;
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }*/
+    100% {
+        transform: scale(1.3);
+        opacity: .5;
+    }
+}
+
+.spinner-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.fa-solid fa-spinner {
+        margin-top: 3rem;
+        margin: 4rem;
+}
+
+@keyframes load {
+    
+}
+
+[data-anchor="products"]:hover {
+    background-color: rgb(40, 47, 44);
+    color: white;
+    transform: scale(2.5);
+}
+
+
+#companies-table {
+    border: 15px;
+}
+
+[data-company] {
+    color: blueviolet;
+}
+
+[data-company="ccl"] {
+    color: rgb(21, 224, 21);
+}
+
+@media screen and (min-width: 100px) and (max-width: 999px) {
+
+    /*tamanho minimo da tela*/
+    .bg {
+        height: 5vh;
+    }
+}
+
+@media print {
+    .bg {
+        display: none;
+        /* quando for imprimir, a imagem q esta com class bg, não ira aparecer*/
+    }
+}

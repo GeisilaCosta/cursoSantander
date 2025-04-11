@@ -1,0 +1,55 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+}
+
+body {
+    background-color: aquamarine;
+    padding-top: 1rem;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+main {
+    padding-top: 7rem;
+}
+
+.box {
+    flex: 25%;
+    height: 100px;
+    width: 200px;
+    padding: 15px;
+    margin: 25px;
+    background-color: blueviolet;
+    font-size: 2.4rem;
+    color: aliceblue;
+    border: 2px solid black;
+    display: inline-block;
+    /*se o elemento couder ao lado esse codigo coloca ao lado*/
+    border-radius: 1.4rem;
+    position: static;
+    /*padrão*/
+}
+
+.box p,
+button {
+    font-size: 2rem;
+    display: flex;
+    gap: 0.5rem;
+}
+
+.boxes {
+    height: calc(100vh);
+    position: relative;
+
+    display: grid;
+    justify-content: flex-start;
+    gap: 2rem 2rem;
+    grid-template-columns: 3fr repeat(2, 1fr);
+    /*grid-template-columns: 3fr 1fr 1fr;*/
+/*  grid-template-rows: minmax(150px 10fr) 2fr;*/
+}

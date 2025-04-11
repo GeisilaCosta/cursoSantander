@@ -1,0 +1,53 @@
+.page-content h1 {
+    font-size: 5.6rem;
+}
+
+.page-content h1 p + p {
+    color: #52b69a;
+}
+
+.page-content {
+    height: 100vh;
+    display: grid ;
+}
+.page-content button {
+    background-color:#52b69a;
+    color: aliceblue;
+}
+
+.page-content footer {
+    background-color: #52b69a;
+    color: aliceblue;
+}
+
+.page-content a {
+    color: aliceblue;
+}
+
+aside {
+    text-align: right;
+
+}
+main {
+    grid-area: title;
+}
+
+aside {
+    grid-area: login;
+}
+
+footer {
+    grid-area: footer;
+}
+
+@media  screen {
+        .page-content {
+            display: grid;
+
+            grid-template-areas:
+            ". title title login ." /*significa que meu titulo vai ocupar 2 colunas e logim 1*/
+            ". title title login ."
+            ". title title login ." /* os pontos significam um espaço vazio. o logim vai ser maior que o titulo*/
+            "footer footer footer footer footer"; /* footer vai ocupar 3 colunas*/
+        }
+}
